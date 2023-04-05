@@ -10,7 +10,7 @@
 <body class="page__body">
   <header class="inner-header">
     <a class="inner-header__logo">
-      <img src="/source/img/header/sedona-logo.svg" width="185" height="96" alt="Логотип городка Седона">
+      <img src="/img/header/sedona-logo.svg" width="185" height="96" alt="Логотип городка Седона">
     </a>
     <nav class="inner-nav">
       <button class="inner-nav__toggle" type="button">
@@ -19,22 +19,22 @@
       <div class="inner-nav__wrapper">
         <ul class="inner-nav__list site-list">
           <li class="site-list__item">
-            <a href="/source/index.html">
+            <a class="site-list__link" href="/source/index.html">
               Главная
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a class="site-list__link" href="#">
               Фото и видео
             </a>
           </li>
           <li class="site-list__item">
-            <a href="#">
+            <a class="site-list__link" href="#">
               Форма отзыва
             </a>
           </li>
           <li class="site-list__item">
-            <a href="https://htmlacademy.ru/">
+            <a class="site-list__link" href="https://htmlacademy.ru/">
               Html academy
             </a>
           </li>
@@ -45,16 +45,18 @@
   <main class="main-container">
     <section class="inner-welcome">
       <h2 class="visually-hidden">Седона</h2>
-      <img src="/source/img/catalog/SEDONA.svg" alt="Логотип Седоны на фоне гор" width="229" height="39">
+      <img src="/img/catalog/SEDONA.svg" alt="Логотип Седоны на фоне гор" width="229" height="39">
     </section>
     <section class="gallery">
-      <h2 class="gallery__title">Фото и видео</h2>
-      <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+      <div class="gallery__intro">
+        <h2 class="gallery__title">Фото и видео</h2>
+        <p class="gallery__description">Не можете решиться на путешествие<br> из-за курса? Фотографии помогут вам<br> забыть о
         политике и экономике.</p>
+      </div>
       <div class="gallery__card gallery__card--wrapper">
         <ul class="gallery__list">
           <li class="gallery__item photo">
-            <img class="photo__image" src="/source/img/catalog/photo-1-mobile.jpg"
+            <img class="photo__image" src="/img/catalog/photo-1-mobile.jpg"
               alt="Пейзаж заката солнца вдоль дороги." width="280" height="280">
             <p class="photo__title">Народные просторы</p>
             <p class="photo__author">Автор фото: Борис</p>
@@ -74,7 +76,7 @@
             <p class="photo__likes">143</p>
           </li>
           <li class="gallery__item photo">
-            <img class="photo__image" src="/source/img/catalog/photo-3-mobile.png"
+            <img class="photo__image" src="/img/catalog/photo-3-mobile.png"
               alt="Пейзах горной дороги усыпанной зелеными деревьями." width="280" height="280">
             <p class="photo__title">Дорога на север</p>
             <p class="photo__author">Автор фото: Петр</p>
@@ -84,7 +86,7 @@
             <p class="photo__likes">96</p>
           </li>
           <li class="gallery__item photo">
-            <img class="photo__image" src="/source/img/catalog/photo-4-mobile.png"
+            <img class="photo__image" src="/img/catalog/photo-4-mobile.png"
               alt="Вид на мост дьявола в каньоне." width="280" height="280">
             <p class="photo__title">Мост дьявола</p>
             <p class="photo__author">Автор фото: Антон</p>
