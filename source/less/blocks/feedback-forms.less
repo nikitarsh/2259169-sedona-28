@@ -1,0 +1,231 @@
+@input-color:#F2F2F2;
+@border-bottom-color:#E5E5E5;
+@title-color:#000000;
+@light-title-color:#00000030;
+@contact-button-color: #E6E6E6;
+@button-primary-color: #81B3D2;
+@button-color-text:#ffffff;
+@required-light-color:#33333360;
+
+.full-name {
+  border-bottom: 1px solid @border-bottom-color;
+}
+
+.feedback-forms__title {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.name-form__fieldset {
+  padding: 20px 20px 39px 20px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.name-form__label {
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.name-form__input-text {
+  width: 280px;
+  height: 58px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: @title-color;
+  background-color: @input-color;
+  border: none;
+  padding-left: 16px;
+}
+
+.name-form__input-text:not(:last-child) {
+  margin: 0  0 16px 0;
+}
+
+.contacts {
+  border-bottom: 1px solid @border-bottom-color;
+}
+
+.contacts__title {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @title-color;
+}
+
+.contacts-form__fieldset {
+  padding: 20px 20px 34px 20px;
+  border: none;
+}
+
+.contacts-form__fieldset-wrapper {
+  display: flex;
+}
+
+.contacts-form__fieldset-wrapper:not(:last-child) {
+  margin: 0  0 16px 0;
+}
+
+.contacts-form__label {
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.contacts-form__input-tel {
+  width: 222px;
+  height: 58px;
+  background-color: @input-color;
+  border: none;
+  padding-left: 16px;
+}
+
+.contacts-form__button-tel {
+  width: 58px;
+  height: 58px;
+  background-color: @contact-button-color;
+  border: none;
+}
+
+.contacts-form__input-email {
+  width: 222px;
+  height: 58px;
+  background-color: @input-color;
+  border: none;
+  padding-left: 16px;
+}
+
+.contacts-form__button-email {
+  width: 58px;
+  height: 58px;
+  background-color: @contact-button-color;
+  border: none;
+}
+
+.impression {
+  border-bottom: 1px solid @border-bottom-color;
+}
+
+.impression__title {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @title-color;
+}
+
+.impression-form__fieldset {
+  margin: 0;
+  padding: 20px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+
+.impression-form__radio-input:not(:last-child) {
+  margin: 0  0 16px 0;
+}
+
+.impression-form__control-label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-left: 16px;
+}
+
+.visited {
+  border-bottom: 1px solid @border-bottom-color;
+}
+
+.visited__title {
+  margin: 24px 0 0 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @title-color;
+}
+
+.visited-form__fieldset {
+  margin: 0;
+  padding: 20px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.visited-form__check-input:not(:last-child) {
+  margin: 0  0 16px 0;
+}
+
+.visited-form__control-label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-left: 16px;
+}
+
+.user-feedback {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 22px 20px;
+  margin: 0;
+}
+
+.user-feedback__title {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @title-color;
+}
+
+.user-feedback__form-input {
+  width: 279px;
+  height: 150px;
+  background-color: @input-color;
+  border: none;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  padding: 16px;
+  margin: 0 0 56px 0;
+  color: @light-title-color;
+}
+
+.user-feedback__form-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @button-color-text;
+  background-color: @button-primary-color;
+  padding: 16px 20px;
+  border: none;
+  margin: 0 0 3px 0;
+}
+
+.user-feedback__form-required {
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0 0 22px 0;
+  color: @required-light-color;
+}
