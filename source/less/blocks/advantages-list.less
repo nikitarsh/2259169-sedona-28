@@ -1,3 +1,39 @@
+.advantages-list__item--wrapper__town {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.advantages-list__item--wrapper__devil-brige {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.advantages-list__item--wrapper__services {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .advantages-list__item--primary {
   background-color: @main-color;
   color: @white-text-color;
@@ -5,12 +41,35 @@
   padding: 37px 18px 37px 18px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    height: 256px;
+  }
 }
 
 .advantages-list__item--secondary {
   padding: 24px 26px;
   background-color: #eeeeee;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 33px 63px 33px;
+    width: 256px;
+    min-height: 256px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    height: 256px;
+    padding: 52px 50px;
+  }
 }
 
 
@@ -37,16 +96,46 @@
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advatages-house.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    min-height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    min-height: 256px;
+  }
 }
 
 .advantages-list__item--food {
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advantages-food.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    min-height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    min-height: 256px;
+  }
 }
 
 .advantages-list__item--gifts {
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advantages-gifts.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    min-height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    min-height: 256px;
+  }
 }
