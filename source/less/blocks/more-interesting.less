@@ -1,6 +1,17 @@
 .more-interesting {
   padding: 17px 20px 0 20px;
   margin: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .more-interesting__title {
