@@ -13,7 +13,7 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 0 95px 58px 95px;
+    padding: 0 120px 65px 120px;
   }
 
   @media (min-width: @desktop-width) {
@@ -51,6 +51,15 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .gallery__description {
@@ -133,5 +142,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+  }
+}
+
+.gallery__card--wrapper:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    background-color: @card-tablet-color;
   }
 }
