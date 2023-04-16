@@ -44,12 +44,10 @@
 
   @media (min-width: @tablet-width) {
     width: 256px;
-    height: 256px;
   }
 
   @media (min-width: @desktop-width) {
     width: 400px;
-    height: 256px;
   }
 }
 
@@ -59,8 +57,8 @@
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 33px 63px 33px;
-    width: 256px;
+    padding: 41px 33px 50px 33px;
+    min-width: 256px;
     min-height: 256px;
     margin: 0;
   }
@@ -79,6 +77,14 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .advantages-list__description {
@@ -97,14 +103,20 @@
   background-image: url("/img/advantages/advatages-house.svg");
   background-repeat: no-repeat;
 
+
   @media (min-width: @tablet-width) {
-    width: 256px;
-    min-height: 256px;
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: left 100px top 60px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
-    min-height: 256px;
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 169px 50px 54px 50px;
   }
 }
 
@@ -114,11 +126,18 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    min-height: 256px;
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: left 100px top 60px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 256px;
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 169px 50px 54px 50px;
   }
 }
 
@@ -128,20 +147,28 @@
   background-repeat: no-repeat;
 
   @media (min-width: @tablet-width) {
-    min-height: 256px;
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: left 100px top 60px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 256px;
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 153px 50px 50px 50px;
   }
 }
 
 .advantages-image {
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 67%;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
   }
 }
+
