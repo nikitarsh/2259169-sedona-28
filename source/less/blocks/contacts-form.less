@@ -1,6 +1,14 @@
 .contacts-form__fieldset {
   padding: 20px 20px 34px 20px;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .contacts-form__fieldset-wrapper {
@@ -22,6 +30,10 @@
   background-color: @input-color;
   border: none;
   padding-left: 16px;
+
+  @media (min-width: @desktop-width) {
+    width: 344px;
+  }
 }
 
 .contacts-form__button-tel {
@@ -37,6 +49,10 @@
   background-color: @input-color;
   border: none;
   padding-left: 16px;
+
+  @media (min-width: @desktop-width) {
+    width: 344px;
+  }
 }
 
 .contacts-form__button-email {

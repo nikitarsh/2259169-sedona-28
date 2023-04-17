@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .name-form__label {
@@ -20,6 +28,10 @@
   background-color: @input-color;
   border: none;
   padding-left: 16px;
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
 }
 
 .name-form__input-text:not(:last-child) {
