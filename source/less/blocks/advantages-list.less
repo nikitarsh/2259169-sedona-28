@@ -1,3 +1,39 @@
+.advantages-list__item--wrapper__town {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.advantages-list__item--devil-brige {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.advantages-list__item--services {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .advantages-list__item--primary {
   background-color: @main-color;
   color: @white-text-color;
@@ -5,12 +41,33 @@
   padding: 37px 18px 37px 18px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+  }
 }
 
 .advantages-list__item--secondary {
   padding: 24px 26px;
   background-color: #eeeeee;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 41px 33px 50px 33px;
+    min-width: 256px;
+    min-height: 256px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    height: 256px;
+    padding: 52px 50px;
+  }
 }
 
 
@@ -20,6 +77,14 @@
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 15px;
+  }
 }
 
 .advantages-list__description {
@@ -37,16 +102,72 @@
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advatages-house.svg");
   background-repeat: no-repeat;
+
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 169px 50px 54px 50px;
+  }
 }
 
 .advantages-list__item--food {
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advantages-food.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 169px 50px 54px 50px;
+  }
 }
 
 .advantages-list__item--gifts {
   padding: 23px 18px 25px 65px;
   background-image: url("/img/advantages/advantages-gifts.svg");
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 256px;
+    min-height: 331px;
+    padding: 158px 20px 45px 10px;
+    background-position: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+    min-width: 400px;
+    min-height: 330px;
+    padding: 153px 50px 50px 50px;
+  }
+}
+
+.advantages-image {
+  @media (min-width: @tablet-width) {
+    width: 67%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }

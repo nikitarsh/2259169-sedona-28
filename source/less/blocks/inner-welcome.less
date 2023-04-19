@@ -1,6 +1,14 @@
 .inner-welcome__logo {
   display: block;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .inner-welcome {
@@ -12,4 +20,14 @@
   background-repeat: no-repeat;
   background-color: @main-color;
   background-position: bottom center, top center;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 95px 154px 117px 154px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding: 157px 370px 120px 370px;
+  }
 }

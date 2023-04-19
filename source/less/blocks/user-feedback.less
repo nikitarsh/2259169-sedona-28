@@ -16,7 +16,7 @@
 }
 
 .user-feedback__form-input {
-  width: 279px;
+  min-width: 279px;
   height: 150px;
   background-color: @input-color;
   border: none;
@@ -48,4 +48,20 @@
   text-align: right;
   margin: 0 0 22px 0;
   color: @required-light-color;
+
+  @media (min-width: @tablet-width) {
+    margin: 29px 0 0 0;
+  }
+}
+
+.user-feedback__set {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }

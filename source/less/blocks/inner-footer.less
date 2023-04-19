@@ -1,4 +1,15 @@
 .inner-footer__wrapper {
-  min-height: 235px;
   padding: 33px 82px  33px 82px;
+
+  @media (min-width: @tablet-width) {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px  36px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 47px 120px  47px 120px;
+  }
 }

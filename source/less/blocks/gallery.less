@@ -1,9 +1,45 @@
+.gallery {
+  @media (min-width: @tablet-width) {
+    padding: 66px 60px 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
 .gallery__intro {
   padding: 37px 20px 25px 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 120px 65px 120px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 370px 65px 370px;
+  }
 }
 
 .gallery__title {
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.gallery__author {
+  margin: 0;
+}
+
+.gallery__image {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
+.gallery__header {
   margin: 0;
   font-size: 18px;
   line-height: 26px;
@@ -11,6 +47,15 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .gallery__description {
@@ -25,6 +70,72 @@
 
 .gallery__list {
   list-style: none;
-  padding: 24px 20px 14px 20px;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.gallery__card--wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    background-color: @input-color;
+    height: 80px;
+  }
+}
+
+.gallery__text--wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 22px 0 15px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 22px 0 15px 21px;
+  }
+}
+
+.gallery__button--wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    padding: 28px 20px 27px 0;
+  }
+}
+
+.gallery__button {
+  border: none;
+}
+
+.gallery__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    min-width: 324px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 400px;
+  }
+}
+
+.gallery__item:first-child {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.gallery__card--wrapper:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    background-color: @card-tablet-color;
+  }
 }
