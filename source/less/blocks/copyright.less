@@ -1,7 +1,17 @@
+.main-footer__copyright {
+  display: flex;
+  align-items: center;
+}
+
 .copyright__text {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @mobile-width) {
+    margin: 0 12px 0 0;
+  }
 }
+
