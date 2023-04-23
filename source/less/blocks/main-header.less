@@ -4,6 +4,7 @@
 }
 
 .main-nav {
+  position: relative;
   min-height: 56px;
   margin: 0;
 
@@ -15,6 +16,37 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  background-color: @button-primary-color;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    width: 4px;
+    height: 28px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
