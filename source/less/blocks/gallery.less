@@ -27,6 +27,10 @@
   text-transform: uppercase;
   color: #000000;
   margin: 0;
+
+  @media (min-width: @desktop-width) {
+    color: @white-text-color;
+  }
 }
 
 .gallery__author {
@@ -89,6 +93,15 @@
     background-color: @input-color;
     height: 80px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: @card-transparent-color;
+    color: @white-text-color;
+  }
 }
 
 .gallery__text-wrapper {
@@ -111,6 +124,18 @@
 
 .gallery__button {
   border: none;
+
+  @media (min-width: @desktop-width) {
+    background-color: @card-transparent-color;
+  }
+}
+
+.gallery__button path {
+  border: none;
+
+  @media (min-width: @desktop-width) {
+    fill: @white-text-color;
+  }
 }
 
 .gallery__item {
@@ -123,6 +148,7 @@
 
   @media (min-width: @desktop-width) {
     min-width: 400px;
+    position: relative;
   }
 }
 
