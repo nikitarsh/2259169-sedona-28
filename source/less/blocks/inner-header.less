@@ -3,18 +3,64 @@
   margin: 0;
 }
 
-.inner-nav {
-  min-height: 56px;
-  margin: 0;
+.inner-header__toggle {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  top: 17px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
+    display: none;
   }
 
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background-color: @button-primary-color;
+    box-shadow: 0 8px 0 0 @button-primary-color, 0 16px 0 0 @button-primary-color;
+  }
+}
+
+.inner-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  background-color: @button-primary-color;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 28px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -29,17 +75,21 @@
     flex-direction: row;
     min-height: 56px;
     position: relative;
+    justify-content: space-evenly;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
     min-height: 56px;
+    position: relative;
+    justify-content: space-evenly;
   }
 }
 
 .inner-header__menu {
   height: 56px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     height: 0;
@@ -49,6 +99,7 @@
     height: 0;
   }
 }
+
 
 .site-list__item--link {
   min-height: 56px;
@@ -67,7 +118,7 @@
     font-size: 14px;
     line-height: 21px;
     display: flex;
-    padding: 18px 8px 17px 8px;
+    padding: 18px 10px 17px 10px;
     color: #000000;
     background-color: #ffffff;
   }
@@ -84,20 +135,20 @@
 
 .site-list__item:nth-child(2) {
   @media (min-width: @tablet-width) {
-    margin-right: 76px;
+    margin-right: 90px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 40px;
+    margin-right: 140px;
   }
 }
 
 .site-list__item:nth-child(3) {
   @media (min-width: @tablet-width) {
-    margin-left: 76px;
+    margin-left: 90px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 30px;
+    margin-left: 140px;
   }
 }
