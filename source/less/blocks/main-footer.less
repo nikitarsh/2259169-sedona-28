@@ -1,4 +1,7 @@
 .main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 33px 82px  33px 82px;
 
   @media (min-width: @tablet-width) {
@@ -6,11 +9,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 36px 60px  36px 60px;
+    padding: 30px 60px  30px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 47px 120px  47px 120px;
+    padding: 30px 120px  30px 120px;
   }
 }
 
@@ -23,4 +26,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    margin: 13px 0 13px 0;
+  }
 }
