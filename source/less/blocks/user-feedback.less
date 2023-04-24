@@ -16,6 +16,7 @@
 }
 
 .user-feedback__form-input {
+  font-family: "PT Sans", sans-serif;
   min-width: 279px;
   height: 150px;
   background-color: @input-color;
@@ -29,6 +30,7 @@
 }
 
 .user-feedback__form-button {
+  font-family: "PT Sans", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -37,7 +39,15 @@
   background-color: @button-primary-color;
   padding: 16px 20px;
   border: none;
-  margin: 0 0 3px 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 16px 101px;
+  }
 }
 
 .user-feedback__form-required {
