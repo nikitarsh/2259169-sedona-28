@@ -1,20 +1,84 @@
 .main-header {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
+}
+
+.main-header__toggle {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  top: 17px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 4px;
+    background-color: @button-primary-color;
+    box-shadow: 0 8px 0 0 @button-primary-color, 0 16px 0 0 @button-primary-color;
+  }
 }
 
 .main-nav {
+  position: relative;
   min-height: 56px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+  background-color: @button-primary-color;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 28px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
@@ -52,14 +116,46 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
     display: flex;
-    padding: 0;
+    padding: 18px 10px 17px 10px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    padding: 18px 40px 17px 40px;
     color: #000000;
     background-color: #ffffff;
   }
 }
 
+.site-list__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 140px;
+  }
+}
+
+.site-list__item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 140px;
+  }
+}
+
 .main-header__menu {
+  position: relative;
   min-height: 56px;
 
   @media (min-width: @tablet-width) {
@@ -79,11 +175,11 @@
 
   @media (min-width: @tablet-width) {
     top: 0;
-    right: 242px;
+    right: 291px;
   }
 
   @media (min-width: @desktop-width) {
     top: 0;
-    right: 377px;
+    right: 507px;
   }
 }

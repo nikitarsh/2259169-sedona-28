@@ -12,28 +12,28 @@
   <div class="page-container">
     <header class="inner-header">
       <nav class="inner-nav">
-        <button class="visually-hidden inner-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
+        <button class="inner-nav__toggle" type="button">
+          <span class="visually-hidden">Закрыть меню.</span>
         </button>
         <div class="inner-nav__wrapper">
           <ul class="inner-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__item--link" href="/index.html">
+              <a class="site-list__item-link" href="/index.html">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item--link" href="/catalog.html">
+              <a class="site-list__item-link" href="/catalog.html">
                 Фото и видео
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item--link" href="/forml.html">
+              <a class="site-list__item-link" href="/forml.html">
                 Форма отзыва
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item--link" href="https://htmlacademy.ru/">
+              <a class="site-list__item-link" href="https://htmlacademy.ru/">
                 Html academy
               </a>
             </li>
@@ -44,6 +44,9 @@
         <img class="logo" src="/img/header/sedona-logo.svg" width="185" height="96" alt="Логотип городка Седона">
       </a>
       <div class="inner-header__menu">
+        <button class="inner-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню.</span>
+        </button>
       </div>
     </header>
     <main class="main-container">
@@ -62,12 +65,12 @@
           <li class="gallery__item">
             <img class="gallery__image" src="/img/catalog/photo-1-mobile.jpg" alt="Пейзаж заката солнца вдоль дороги."
               width="280" height="280">
-            <div class="gallery__card--wrapper">
-              <div class="gallery__text--wrapper">
+            <div class="gallery__card-wrapper">
+              <div class="gallery__text-wrapper">
                 <p class="gallery__title">Неродные просторы</p>
                 <p class="gallery__author">Автор фото: Борис</p>
               </div>
-              <div class="gallery__button--wrapper">
+              <div class="gallery__button-wrapper">
                 <button class="gallery__button" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none" viewBox="0 0 23 21">
                     <path fill="#000"
@@ -76,19 +79,19 @@
                   </svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
-                <p class="photo__likes">96</p>
+                <p class="gallery__likes">96</p>
               </div>
             </div>
           </li>
           <li class="gallery__item">
             <img class="gallery__image" src="img/catalog/photo-2-mobile.png"
               alt="Фотография дикорастущего кактуса в горах." width="280" height="280">
-            <div class="gallery__card--wrapper">
-              <div class="gallery__text--wrapper">
+            <div class="gallery__card-wrapper">
+              <div class="gallery__text-wrapper">
                 <p class="gallery__title">Местная растительность</p>
                 <p class="gallery__author">Автор фото: Сергей</p>
               </div>
-              <div class="gallery__button--wrapper">
+              <div class="gallery__button-wrapper">
                 <button class="gallery__button" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none" viewBox="0 0 23 21">
                     <path fill="#000"
@@ -104,12 +107,12 @@
           <li class="gallery__item">
             <img class="gallery__image" src="/img/catalog/photo-3-mobile.png"
               alt="Пейзах горной дороги усыпанной зелеными деревьями." width="280" height="280">
-            <div class="gallery__card--wrapper">
-              <div class="gallery__text--wrapper">
+            <div class="gallery__card-wrapper">
+              <div class="gallery__text-wrapper">
                 <p class="gallery__title">Дорога на север</p>
                 <p class="gallery__author">Автор фото: Петр</p>
               </div>
-              <div class="gallery__button--wrapper">
+              <div class="gallery__button-wrapper">
                 <button class="gallery__button" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none" viewBox="0 0 23 21">
                     <path fill="#000"
@@ -118,19 +121,19 @@
                   </svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
-                <p class="photo__likes">96</p>
+                <p class="gallery__likes">96</p>
               </div>
             </div>
           </li>
           <li class="gallery__item">
             <img class="gallery__image" src="/img/catalog/photo-4-mobile.png" alt="Вид на мост дьявола в каньоне."
               width="280" height="280">
-            <div class="gallery__card--wrapper">
-              <div class="gallery__text--wrapper">
+            <div class="gallery__card-wrapper">
+              <div class="gallery__text-wrapper">
                 <p class="gallery__title">Мост дьявола</p>
                 <p class="gallery__author">Автор фото: Антон</p>
               </div>
-              <div class="gallery__button--wrapper">
+              <div class="gallery__button-wrapper">
                 <button class="gallery__button" type="button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="none" viewBox="0 0 23 21">
                     <path fill="#000"
@@ -139,10 +142,9 @@
                   </svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
-                <p class="photo__likes">254</p>
+                <p class="gallery__likes">254</p>
               </div>
             </div>
-  </div>
   </section>
   <section class="more-interesting">
     <div class="more-interesting__wrapper">
