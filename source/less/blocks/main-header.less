@@ -1,6 +1,7 @@
 .main-header {
   position: relative;
   margin: 0;
+  z-index: 20;
 }
 
 .main-header__toggle {
@@ -154,6 +155,12 @@
   }
 }
 
+.site-list__item:nth-child(4) {
+  @media (min-width: @mobile-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
+
 .main-header__menu {
   position: relative;
   min-height: 56px;
@@ -168,9 +175,9 @@
 }
 
 .logo {
-  display: block;
   position: absolute;
   right: 65px;
+  z-index: 100;
 
 
   @media (min-width: @tablet-width) {

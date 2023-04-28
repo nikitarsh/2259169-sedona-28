@@ -52,8 +52,16 @@
     <main class="main-container">
       <section class="welcome-sedona">
         <h1 class="visually-hidden">Добро пожаловать в прекрасную Седону!</h1>
-        <img class="welcome-sedona__logo" src="/img/welcome/welcome-logo.svg" alt="Добро пожаловать в Седону!"
+        <div class="welocme-sedona__wrapper">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/welcome/welcome-background.jpg 1x, img/welcome/welcome-background@2x.jpg 2x">
+              <img class="welcome-background" alt="Пейзаж гор" src="img/welcome/welcome-background-mobile.jpg" srcset="img/welcome/welcome-background-mobile@2x.jpg" width="320"
+              height="389">
+          </picture>
+          <img class="welcome-sedona__logo" src="/img/welcome/welcome-logo.svg" alt="Добро пожаловать в Седону!"
           width="282" height="214">
+        </div>
       </section>
       <section class="about-sedona">
         <h2 class="about-sedona__title">
