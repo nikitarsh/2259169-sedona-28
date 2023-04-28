@@ -136,6 +136,11 @@
 }
 
 .site-list__item:nth-child(2) {
+  @media (max-width: @tablet-width) {
+    border-top: 1px #01010120 solid;
+    border-bottom: 1px #01010120 solid;
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 90px;
   }
@@ -146,6 +151,10 @@
 }
 
 .site-list__item:nth-child(3) {
+  @media (max-width: @tablet-width) {
+    border-bottom: 1px @card-transparent-color solid;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 90px;
   }
@@ -156,7 +165,7 @@
 }
 
 .site-list__item:nth-child(4) {
-  @media (min-width: @mobile-width) {
+  @media (max-width: @tablet-width) {
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }
