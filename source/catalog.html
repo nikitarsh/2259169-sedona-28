@@ -176,9 +176,19 @@
       <p class="more-interesting__discription">Смотрите видеопрезентацию и скорее за билетами, пока они не
         подорожаливочередной раз!</p>
     </div>
-    <img class="more-interesting__preview" src="/img/catalog/video-mobile.jpg" width="280" height="177"
-      alt="Превью видеопрезентации о Седоне.">
-    <button class="more-interesing__play"></button>
+    <a class="more-interesting__video">
+      <picture>
+        <source media="(min-width: 1200px)"
+        srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)"
+        srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x">
+        <img class="more-interesting__preview" src="/img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg" width="280" height="177"
+        alt="Превью видеопрезентации о Седоне.">
+      </picture>
+      <button class="more-interesing__play">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54"><path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z"/></svg>
+      </button>
+    </a>
   </section>
   </main>
   <footer class="inner-footer">
