@@ -38,8 +38,11 @@
 }
 
 .gallery__image {
+  display: block;
+
   @media (min-width: @tablet-width) {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -171,8 +174,12 @@
   }
 }
 
-.gallery__card-wrapper:nth-child(3) {
+.gallery__card-wrapper--tablet {
   @media (min-width: @tablet-width) {
     background-color: @card-tablet-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: @card-transparent-color;
   }
 }
