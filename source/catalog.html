@@ -52,8 +52,15 @@
     <main class="main-container">
       <section class="inner-welcome">
         <h2 class="visually-hidden">Седона</h2>
-        <img class="inner-welcome__logo" src="/img/catalog/SEDONA.svg" alt="Логотип Седоны на фоне гор" width="229"
+        <div class="inner-welcome__wrapper">
+          <picture>
+            <source media="(min-width: 768px)"
+            srcset="img/inner/inner-welcome-tablet.jpg 1x, img/inner/inner-welcome-tablet@2x.jpg 2x">
+            <img class="inner-background" alt="Пейзаж гор." src="img/inner/inner-welcome-mobile.jpg" srcset="img/inner/inner-welcome-mobile@2x.jpg" width="320" height="158">
+          </picture>
+          <img class="inner-welcome__logo" src="/img/catalog/SEDONA.svg" alt="Логотип Седоны на фоне гор" width="229"
           height="39">
+        </div>
       </section>
       <section class="gallery">
         <div class="gallery__intro">
@@ -63,8 +70,14 @@
         </div>
         <ul class="gallery__list">
           <li class="gallery__item">
-            <img class="gallery__image" src="/img/catalog/photo-1-mobile.jpg" alt="Пейзаж заката солнца вдоль дороги."
+            <picture>
+              <source media="(min-width: 1200px)"
+              srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg2x">
+              <source media="(min-width: 768px)"
+              srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg" alt="Пейзаж заката солнца вдоль дороги."
               width="280" height="280">
+            </picture>
             <div class="gallery__card-wrapper">
               <div class="gallery__text-wrapper">
                 <p class="gallery__title">Неродные просторы</p>
@@ -84,8 +97,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="img/catalog/photo-2-mobile.png"
-              alt="Фотография дикорастущего кактуса в горах." width="280" height="280">
+            <picture>
+              <source media="(min-width: 1200px)"
+              srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+              srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg" alt="Фотография дикорастущего кактуса в горах."
+              width="280" height="280">
+            </picture>
             <div class="gallery__card-wrapper">
               <div class="gallery__text-wrapper">
                 <p class="gallery__title">Местная растительность</p>
@@ -105,9 +124,15 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="/img/catalog/photo-3-mobile.png"
-              alt="Пейзах горной дороги усыпанной зелеными деревьями." width="280" height="280">
-            <div class="gallery__card-wrapper">
+            <picture>
+              <source media="(min-width: 1200px)"
+              srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+              srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg" alt="Пейзах горной дороги усыпанной зелеными деревьями."
+              width="280" height="280">
+            </picture>
+            <div class="gallery__card-wrapper gallery__card-wrapper--tablet">
               <div class="gallery__text-wrapper">
                 <p class="gallery__title">Дорога на север</p>
                 <p class="gallery__author">Автор фото: Петр</p>
@@ -126,8 +151,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__image" src="/img/catalog/photo-4-mobile.png" alt="Вид на мост дьявола в каньоне."
+            <picture>
+              <source media="(min-width: 1200px)"
+              srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+              srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg" alt="Вид на мост дьявола в каньоне."
               width="280" height="280">
+            </picture>
             <div class="gallery__card-wrapper">
               <div class="gallery__text-wrapper">
                 <p class="gallery__title">Мост дьявола</p>
@@ -152,9 +183,19 @@
       <p class="more-interesting__discription">Смотрите видеопрезентацию и скорее за билетами, пока они не
         подорожаливочередной раз!</p>
     </div>
-    <img class="more-interesting__preview" src="/img/catalog/video-mobile.jpg" width="280" height="177"
-      alt="Превью видеопрезентации о Седоне.">
-    <button class="more-interesing__play"></button>
+    <a class="more-interesting__video">
+      <picture>
+        <source media="(min-width: 1200px)"
+        srcset="img/catalog/video-desktop.jpg 1x, img/catalog/video-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)"
+        srcset="img/catalog/video-tablet.jpg 1x, img/catalog/video-tablet@2x.jpg 2x">
+        <img class="more-interesting__preview" src="/img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg" width="280" height="177"
+        alt="Превью видеопрезентации о Седоне.">
+      </picture>
+      <button class="more-interesing__play">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54"><path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z"/></svg>
+      </button>
+    </a>
   </section>
   </main>
   <footer class="inner-footer">

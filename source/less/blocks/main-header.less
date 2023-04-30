@@ -1,6 +1,7 @@
 .main-header {
   position: relative;
   margin: 0;
+  z-index: 20;
 }
 
 .main-header__toggle {
@@ -135,6 +136,11 @@
 }
 
 .site-list__item:nth-child(2) {
+  @media (max-width: @tablet-width) {
+    border-top: 1px #01010120 solid;
+    border-bottom: 1px #01010120 solid;
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 90px;
   }
@@ -145,12 +151,22 @@
 }
 
 .site-list__item:nth-child(3) {
+  @media (max-width: @tablet-width) {
+    border-bottom: 1px @card-transparent-color solid;
+  }
+
   @media (min-width: @tablet-width) {
     margin-left: 90px;
   }
 
   @media (min-width: @desktop-width) {
     margin-left: 140px;
+  }
+}
+
+.site-list__item:nth-child(4) {
+  @media (max-width: @tablet-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }
 
@@ -168,9 +184,9 @@
 }
 
 .logo {
-  display: block;
   position: absolute;
   right: 65px;
+  z-index: 100;
 
 
   @media (min-width: @tablet-width) {

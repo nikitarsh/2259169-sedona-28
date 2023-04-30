@@ -1,4 +1,5 @@
 .more-interesting {
+  position: relative;
   padding: 17px 20px 0 20px;
   margin: 0;
 
@@ -18,7 +19,7 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0;
+  margin: 0 0 20px 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 20px 0;
@@ -49,7 +50,7 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0;
+  margin: 0 0 38px 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 20px 0;
@@ -69,5 +70,24 @@
   @media (min-width: @desktop-width) {
     width: 100%;
     height: 100%;
+  }
+}
+
+.more-interesing__play {
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  right: 136px;
+  bottom: 61px;
+
+  @media (min-width: @tablet-width) {
+    right: 360px;
+    bottom: 263px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 570px;
+    bottom: 307px;
   }
 }

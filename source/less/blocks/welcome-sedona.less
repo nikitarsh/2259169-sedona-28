@@ -1,27 +1,40 @@
 .welcome-sedona__logo {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
   display: block;
-  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 461px;
+    height: 350px;
+  }
 }
 
-.welcome-sedona {
-  box-sizing: border-box;
-  background-image: url("/img/welcome/welcome-triangle.svg"), url("/img/welcome/welcome-background.jpg");
-  background-color: #81b3d2;
-  background-size: 100% cover;
-  background-repeat: no-repeat;
-  background-position: bottom center, top center;
-  min-height: 389px;
-  width: 320px;
-  margin: 0;
-  padding: 90px 19px 85px 19px;
+.welocme-sedona__wrapper {
+  position: relative;
 
-  @media (min-width: @tablet-width) {
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
     width: 100%;
-    padding: 95px 154px 117px 154px;
+    height: 57px;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%, 0%);
+    background-image: url("/img/welcome/welcome-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 100%;
-    padding: 157px 370px 120px 370px;
+.welcome-background {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    min-height: 518px;
   }
 }
