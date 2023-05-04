@@ -89,12 +89,18 @@
                     своя жизнь</p>
                 </div>
                 <picture>
-                  <source media="(min-width: 1200px)" src="/source/img/advantages/advantges-city-mobile@2x.jpg"
+                  <source type="image/webp" media="(min-width: 1200px)"
+                  srcset="img/advantages/advantages-city-desktop.webp 1x, img/advantages/advantages-city-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/advantages/advantages-city-tablet.webp 1x, img/advantages/advantages-city-tablet@2x.webp 2x">
+                  <img class="advantages-image" src="img/advantages/advantges-city-mobile.webp" srcset="img/advantages/advantges-city-mobile@2x.webp" alt="Вид на центральную площадь."
+                  width="320" height="260">
+                  <!-- <source media="(min-width: 1200px)"
                   srcset="img/advantages/advantages-city-desktop.jpg 1x, img/advantages/advantages-city-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
                   srcset="img/advantages/advantages-city-tablet.jpg 1x, img/advantages/advantages-city-tablet@2x.jpg 2x">
                   <img class="advantages-image" src="img/advantages/advantges-city-mobile.jpg" srcset="img/advantages/advantges-city-mobile@2x.jpg" alt="Вид на центральную площадь."
-                  width="320" height="260">
+                  width="320" height="260"> -->
                 </picture>
               </div>
             </li>
