@@ -92,11 +92,11 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    height: 0;
+    display: none;
   }
 
   @media (min-width: @desktop-width) {
-    height: 0;
+    display: none;
   }
 }
 
@@ -150,5 +150,23 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 140px;
+  }
+}
+
+.inner-header__logo {
+  position: absolute;
+  right: 65px;
+  z-index: 100;
+  cursor: pointer;
+
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+    right: 291px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 0;
+    right: 507px;
   }
 }
