@@ -12,6 +12,17 @@
 }
 
 .welocme-sedona__wrapper {
+  min-height: 389px;
+  background-image: url("/img/welcome/welcome-background-mobile.jpg");
+  background-color: @main-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/welcome/welcome-background-mobile@2x.jpg");
+  }
+
   position: relative;
 
   &::after {
@@ -29,12 +40,13 @@
   }
 }
 
-.welcome-background {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-
-  @media (min-width: 768px) {
+@media (min-width: @tablet-width) {
+  .welocme-sedona__wrapper {
     min-height: 518px;
+    background-image: url("/img/welcome/welcome-background.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/welcome/welcome-background@2x.jpg");
+    }
   }
 }
