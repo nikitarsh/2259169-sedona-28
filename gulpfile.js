@@ -6,9 +6,9 @@ import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
-import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+
 
 
 
@@ -77,5 +77,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, server, watcher, optimizeImages, copyImages
+  html, styles, server, watcher, copyImages, optimizeImages
 );
