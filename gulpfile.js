@@ -7,15 +7,14 @@ import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
-
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
 
 // Clean
 
 export const clean = () => {
   return del("build");
 };
-
-
 
 // Styles
 
@@ -57,6 +56,20 @@ const copyImages = () => {
   .pipe(gulp.dest('build/img'));
 }
 
+//SVG
+const svg = () =>
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inLineSvg: true
+    }))
+    .pipe(gulp.dest('build/img'));
+}
 
 // Server
 
@@ -72,6 +85,13 @@ const server = (done) => {
   done();
 }
 
+//Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
@@ -79,13 +99,16 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, browser.reload));
 }
 
+//Default
 
 export default gulp.series(
   clean,
   copyImages,
   gulp.parallel(
   html,
-  styles
+  styles,
+  svg,
+  sprite,
   ),
   gulp.series(
     server, watcher
