@@ -1,4 +1,5 @@
 import gulp from 'gulp';
+import del from "del";
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
@@ -6,9 +7,13 @@ import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
-import terser from 'gulp-terser';
-import squoosh from 'gulp-libsquoosh';
 
+
+// Clean
+
+export const clean = () => {
+  return del("build");
+};
 
 
 
@@ -44,12 +49,11 @@ const scripts = () => {
 // Images
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
-  .pipe(squoosh())
   .pipe(gulp.dest('build/img'));
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src('source/img/**/*.{jpg,png,svg}')
   .pipe(gulp.dest('build/img'));
 }
 
@@ -72,10 +76,18 @@ const server = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, browser.reload));
 }
 
 
 export default gulp.series(
-  html, styles, server, watcher, copyImages, optimizeImages
+  clean,
+  copyImages,
+  gulp.parallel(
+  html,
+  styles
+  ),
+  gulp.series(
+    server, watcher
+  )
 );
