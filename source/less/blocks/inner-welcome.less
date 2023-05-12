@@ -12,6 +12,17 @@
 }
 
 .inner-welcome__wrapper {
+  min-height: 158px;
+  background-image: url("/img/inner/inner-welcome-mobile.jpg");
+  background-color: @main-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/img/welcome/welcome-inner-mobile@2x.jpg");
+  }
+
   position: relative;
 
   &::after {
@@ -29,20 +40,25 @@
   }
 }
 
-.inner-welcome {
-  padding: 0;
-  margin: 0;
-  width: 320px;
-  background-color: @main-color;
+@media (min-width: @tablet-width) {
+  .inner-welcome__wrapper {
+    min-height: 290px;
+    background-image: url("/img/inner/inner-welcome-tablet.jpg");
 
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    padding: 0;
+    @media (min-resolution: 2dppx) {
+      background-image: url("/source/img/inner/inner-welcome-tablet@2x.jpg");
+    }
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 100%;
-    padding: 0;
+@media (min-width: @desktop-width) {
+  .inner-welcome__wrapper {
+    min-height: 301px;
+    background-image: url("/img/inner/inner-welcome-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/inner/inner-welcome-desktop@2x.jpg");
+    }
   }
 }
 
