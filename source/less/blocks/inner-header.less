@@ -62,6 +62,16 @@
   &::after {
     transform: rotate(-45deg);
   }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(@white-text-color, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@white-text-color, 30%);
+  }
 }
 
 .inner-nav__list {

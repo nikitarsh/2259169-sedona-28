@@ -70,6 +70,10 @@
     width: 4px;
     height: 28px;
     background-color: #ffffff;
+
+    &:hover {
+      color: @title-color;
+    }
   }
 
   &::before {
@@ -79,6 +83,16 @@
 
   &::after {
     transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(@white-text-color, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@white-text-color, 30%);
   }
 }
 
