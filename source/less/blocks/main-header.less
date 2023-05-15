@@ -126,7 +126,7 @@
 }
 
 
-.site-list__item--link {
+.site-list__link {
   min-height: 56px;
   display: block;
   font-size: 18px;
@@ -162,8 +162,14 @@
     color: @active-text-color;
 
     @media (min-width: @tablet-width) {
-      color: @main-nav-active-color;
+      color: @card-transparent-color;
       background-color: transparent;
+    }
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      color: @main-nav-current-color;
     }
   }
 
