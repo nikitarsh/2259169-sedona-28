@@ -38,6 +38,19 @@
   background-color: #81b3d2;
   padding: 16px 35px 16px 35px;
 
+  &:hover {
+    background-color: @hover-button-color;
+  }
+
+  &:active {
+    background-color: @active-button-color;
+    color: @active-text-color;
+  }
+
+  &:disabled {
+    background-color: @disabled-button-color;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 15px 50px 17px 50px;
   }
