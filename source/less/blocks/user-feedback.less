@@ -40,6 +40,20 @@
   padding: 16px 20px;
   border: none;
   margin: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-button-color;
+  }
+
+  &:active {
+    background-color: @active-button-color;
+    color: @active-text-color;
+  }
+
+  &:disabled {
+    background-color: @disabled-button-color;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 16px 70px;
