@@ -27,6 +27,16 @@
     background-color: @button-primary-color;
     box-shadow: 0 8px 0 0 @button-primary-color, 0 16px 0 0 @button-primary-color;
   }
+
+  &:hover::before {
+    background-color: fade(@button-primary-color, 60%);
+    box-shadow: 0 8px 0 0 fade(@button-primary-color, 60%), 0 16px 0 0 fade(@button-primary-color, 60%);
+  }
+
+  &:active::before {
+    background-color: fade(@button-primary-color, 30%);
+    box-shadow: 0 8px 0 0 fade(@button-primary-color, 30%), 0 16px 0 0 fade(@button-primary-color, 30%);
+  }
 }
 
 .main-nav {
@@ -92,7 +102,7 @@
 
   &:active::before,
   &:active::after {
-    background-color: fade(@white-text-color, 30%);
+    background-color: fade(@white-text-color, 60%);
   }
 }
 
