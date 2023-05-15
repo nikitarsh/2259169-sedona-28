@@ -21,9 +21,23 @@
   color: #000000;
   margin: 0 0 0 12px;
 
+  &:hover {
+    color: @hover-copyright-color;
+    fill: @hover-copyright-color;
+  }
+
+  &:active {
+    color: @active-copyright-color;
+    fill: @active-copyright-color;
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0 12px 20px 0;
   }
+}
+
+.copyright__link svg {
+  fill: #000000;
 }
 
 .copyright__icon {
