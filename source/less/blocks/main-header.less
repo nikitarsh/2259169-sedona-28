@@ -55,7 +55,7 @@
   height: 22px;
   border: none;
   cursor: pointer;
-  background-color: @button-primary-color;
+  background-color: transparent;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -114,6 +114,34 @@
   background-color: @main-color;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: @hover-button-color;
+
+    @media (min-width: @tablet-width) {
+      color: @button-primary-color;
+      background-color: transparent;
+    }
+  }
+
+  &:focus {
+    background-color: @hover-button-color;
+
+    @media (min-width: @tablet-width) {
+      color: @button-primary-color;
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    background-color: @active-button-color;
+    color: @active-text-color;
+
+    @media (min-width: @tablet-width) {
+      color: @main-nav-active-color;
+      background-color: transparent;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
