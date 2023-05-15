@@ -1,6 +1,6 @@
 .visited-form__fieldset {
   margin: 0;
-  padding: 20px 20px 24px 20px;
+  padding: 20px 32px 24px 32px;
   display: flex;
   flex-direction: column;
   border: none;
@@ -22,4 +22,54 @@
   line-height: 26px;
   font-weight: 700;
   margin-left: 16px;
+}
+
+.visited-form__check-label {
+  position: relative;
+  display: block;
+  padding: 10px 0 16px 62px;
+
+  &:hover {
+    .visited-form__checkbox-mark {
+      background-color: @disabled-button-color;
+    }
+  }
+
+  &:active {
+    .visited-form__checkbox-mark {
+      background-color: @custom-radio-color2;
+    }
+  }
+}
+
+.visited-form__checkbox-mark {
+  background-color: @input-color;
+  width: 46px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 46px;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    background-image: url("/img/inner/tick.svg.svg");
+    background-repeat: no-repeat;
+    top: 15px;
+    left: 12px;
+    position: absolute;
+    display: none;
+    width: 22px;
+    height: 16px;
+  }
+}
+
+.visited-form__check-label input:checked + .visited-form__checkbox-mark::before {
+  display: block;
+}
+
+.visited-form__check-label:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 18px;
+  }
 }
