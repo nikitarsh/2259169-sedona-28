@@ -11,3 +11,48 @@
   text-transform: uppercase;
   color: @title-color;
 }
+
+.impression-form__radio-label {
+  position: relative;
+  display: block;
+  padding: 10px 0 16px 62px;
+
+  &:hover {
+    .impression-form__radio-mark {
+      background-color: @disabled-button-color;
+    }
+  }
+
+  &:active {
+    .impression-form__radio-mark {
+      background-color: @custom-radio-color2;
+    }
+  }
+}
+
+
+.impression-form__radio-mark {
+  border-radius: 50%;
+  background: @input-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 16px;
+    height: 16px;
+    display: none;
+    background-color: @custom-radio-color;
+    border-radius: 50%;
+  }
+}
+
+.impression-form__radio-label input:checked + .impression-form__radio-mark::before {
+  display: block;
+}
