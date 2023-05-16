@@ -68,6 +68,10 @@
   display: block;
 }
 
+.visited-form__check-label input[type="checkbox"]:focus + .visited-form__checkbox-mark {
+  outline: auto;
+}
+
 .visited-form__check-label:nth-child(2) {
   @media (min-width: @tablet-width) {
     margin-right: 18px;
