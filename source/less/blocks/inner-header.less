@@ -85,17 +85,17 @@
 }
 
 .inner-nav__list {
-  min-height: 223px;
   list-style: none;
   margin: 0;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-    min-height: 56px;
+    display: grid;
+    justify-content: center;
     position: relative;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(5, 153px);
+    background-color: #ffffff;
+    z-index: 0;
   }
 
   @media (min-width: @desktop-width) {
