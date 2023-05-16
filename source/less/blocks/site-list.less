@@ -1,12 +1,104 @@
-// .site-list__link {
-//   display: block;
-//   font-size: 18px;
-//   line-height: 26px;
-//   font-weight: 700;
-//   color: #ffffff;
-//   text-decoration: none;
-//   padding: 17px 81px;
-//   background-color: @main-color;
-//   text-align: center;
-//   text-transform: uppercase;
-// }
+.site-list__link {
+  min-height: 56px;
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 17px 81px;
+  background-color: @main-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    padding: 18px 10px 17px 10px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    padding: 18px 40px 17px 40px;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  &:hover {
+    background-color: @hover-button-color;
+
+    @media (min-width: @tablet-width) {
+      color: @button-primary-color;
+      background-color: transparent;
+    }
+  }
+
+  &:focus {
+    background-color: @hover-button-color;
+
+    @media (min-width: @tablet-width) {
+      color: @button-primary-color;
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    background-color: @active-button-color;
+    color: @active-text-color;
+
+    @media (min-width: @tablet-width) {
+      color: @card-transparent-color;
+      background-color: transparent;
+    }
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      color: @main-nav-current-color;
+    }
+
+    @media (min-width: @desktop-width) {
+      color: @main-nav-current-color;
+    }
+  }
+}
+
+.site-list__item:nth-child(2) {
+  @media (max-width: @tablet-width) {
+    border-top: 1px #01010120 solid;
+    border-bottom: 1px #01010120 solid;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-right: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 140px;
+  }
+}
+
+.site-list__item:nth-child(3) {
+  @media (max-width: @tablet-width) {
+    border-bottom: 1px @card-transparent-color solid;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 140px;
+  }
+}
+
+.site-list__item:nth-child(4) {
+  @media (max-width: @tablet-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+}
