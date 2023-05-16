@@ -101,25 +101,16 @@
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    // display: flex;
-    // flex-direction: row;
-    // min-height: 56px;
-    // position: relative;
-    // justify-content: space-evenly;
     display: grid;
     justify-content: center;
     position: relative;
     grid-template-columns: repeat(5, 153px);
     background-color: #ffffff;
-    z-index: 0;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    min-height: 56px;
-    position: relative;
-    justify-content: space-evenly;
+    grid-template-columns: repeat(5, 240px);
   }
 }
 
