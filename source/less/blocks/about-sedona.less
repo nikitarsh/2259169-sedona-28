@@ -1,9 +1,37 @@
 .about-sedona {
   margin: 0;
   padding: 33px 18px 32px 18px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 48px 124px 55px 124px;
+  }
+}
+
+.about-sedona::before {
+  content: "";
+  background-image: url("/img/welcome/welcome-triangle.svg");
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 57px;
+}
+
+.about-sedona::after {
+  content: "";
+  background-image: url("/img/welcome/about-triangle.png");
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 57px;
+  position: absolute;
+  top: 204px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
