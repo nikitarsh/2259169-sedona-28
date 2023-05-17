@@ -1,6 +1,6 @@
 .about-sedona {
   margin: 0;
-  padding: 33px 18px 32px 18px;
+  padding: 33px 24px 32px 24px;
   position: relative;
 
   @media (min-width: @tablet-width) {
@@ -14,6 +14,7 @@
   background-repeat: no-repeat;
   width: 320px;
   height: 57px;
+  bottom: 0;
 }
 
 .about-sedona::after {
@@ -23,7 +24,7 @@
   width: 320px;
   height: 57px;
   position: absolute;
-  top: 204px;
+  bottom: -42px;
   left: 0;
 
   @media (min-width: @tablet-width) {
@@ -37,23 +38,24 @@
 
 .about-sedona__title {
   display: block;
-  margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
   text-align: center;
+  margin: 0 0 35px 0;
 }
 
 .about-sedona__description {
   display: block;
-  font-family: @secondary-fonts;
-  font-size: 12px;
-  line-height: 26px;
+  font-family: @primary-fonts;
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 }
 
 .about-sedona__description br {
