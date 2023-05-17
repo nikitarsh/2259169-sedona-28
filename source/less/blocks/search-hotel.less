@@ -13,13 +13,13 @@
 }
 
 .search-hotel__title {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0;
+  margin: 3px 0 23px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -30,15 +30,24 @@
 }
 
 .search-hotel__description {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
+  margin: 0 0 29px 0;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 44px 0;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
+  }
+}
+
+.search-hotel__description br {
+  @media (min-width: @mobile-width) {
+    display: none;
   }
 }
 
