@@ -1,5 +1,9 @@
 .contacts {
   border-bottom: 1px solid @border-bottom-color;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 0 8px;
+  }
 }
 
 .contacts__title {
@@ -12,6 +16,8 @@
   color: @title-color;
 
   @media (min-width: @tablet-width) {
+    font-size: 21px;
+    line-height: 26px;
     margin: 0 0 24px 0;
   }
 

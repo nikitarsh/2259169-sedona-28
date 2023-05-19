@@ -29,6 +29,10 @@
   display: block;
   padding: 16px 0 20px 46px;
 
+  @media (min-width: @tablet-width) {
+    padding: 16px 0 20px 46px;
+  }
+
   &:hover {
     .visited-form__checkbox-mark {
       background-color: @disabled-button-color;
@@ -74,7 +78,29 @@
 }
 
 .visited-form__check-label:nth-child(2) {
-  @media (min-width: @tablet-width) {
+  @media (max-width: @mobile-width) {
     margin-right: 18px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 5px 70px 0 0;
+  }
+}
+
+.visited-form__check-label:nth-child(1) {
+  @media (min-width: @tablet-width) {
+    margin: 5px 0 0 16px;
+  }
+}
+
+.visited-form__check-label:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-left: 16px;
+  }
+}
+
+.visited-form__check-label:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    margin-right: 57px;
   }
 }

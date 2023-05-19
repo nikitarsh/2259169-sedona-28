@@ -3,6 +3,10 @@
   flex-direction: column;
   padding: 24px 20px 10px 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0;
+  }
 }
 
 .user-feedback__title {
@@ -13,6 +17,10 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 28px;
+  }
 }
 
 .user-feedback__form-input {
@@ -27,6 +35,11 @@
   padding: 16px;
   margin: 0 0 56px 0;
   color: @light-title-color;
+
+  @media (min-width: @tablet-width) {
+    height: 160px;
+    margin: 0 0 47px;
+  }
 }
 
 .user-feedback__form-button {

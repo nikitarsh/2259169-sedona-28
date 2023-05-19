@@ -1,6 +1,10 @@
 .impression {
   border-bottom: 1px solid @border-bottom-color;
   padding: 24px 20px 7px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 21px 7px 35px;
+  }
 }
 
 .impression__title {
@@ -11,12 +15,22 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin: 0 0 31px 0;
+    padding: 0 15px 0 0;
+  }
 }
 
 .impression-form__radio-label {
   position: relative;
   display: block;
   padding: 10px 0 26px 63px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 26px 63px;
+  }
 
   &:hover {
     .impression-form__radio-mark {
@@ -28,6 +42,12 @@
     .impression-form__radio-mark {
       background-color: @custom-radio-color2;
     }
+  }
+}
+
+.impression-form__radio-label:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 54px;
   }
 }
 
