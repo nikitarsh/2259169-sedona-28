@@ -5,6 +5,10 @@
   @media (min-width: @tablet-width) {
     padding: 24px 21px 7px 35px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 35px 29px 53px;
+  }
 }
 
 .impression__title {
@@ -21,6 +25,12 @@
     margin: 0 0 31px 0;
     padding: 0 15px 0 0;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    margin: 0 0 43px 0;
+    padding: 0 15px 0 0;
+  }
 }
 
 .impression-form__radio-label {
@@ -30,6 +40,10 @@
 
   @media (min-width: @tablet-width) {
     padding: 10px 0 26px 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 16px 1px 26px 63px;
   }
 
   &:hover {
@@ -49,8 +63,17 @@
   @media (min-width: @tablet-width) {
     margin-right: 54px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+  }
 }
 
+.impression-form__radio-label:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    margin: 0 17px 0 0;
+  }
+}
 
 .impression-form__radio-mark {
   border-radius: 50%;
