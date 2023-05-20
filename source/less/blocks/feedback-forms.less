@@ -34,15 +34,30 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #000000;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 27px 0;
     font-size: 21px;
     line-height: 26px;
     padding: 0;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      right: -28px;
+      top: -8px;
+      width: 2px;
+      height: 339px;
+      background: #dbdbdb;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 0 24px 0;
+
+    &--line::before {
+      right: -47px;
+    }
   }
 }

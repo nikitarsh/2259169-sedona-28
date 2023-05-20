@@ -24,12 +24,43 @@
   @media (min-width: @tablet-width) {
     padding: 0 79px;
     margin: 0 0 24px 0;
+    position: relative;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      right: -72px;
+      top: 53%;
+    }
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      left: -57px;
+      top: 53%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 21px;
     padding: 0 260px;
     margin: 0 0 60px 0;
+
+    &--line::before {
+      width: 280px;
+      right: -15px;
+    }
+
+    &--line::after {
+      left: -13px;
+      width: 280px;
+    }
   }
 }
 
@@ -88,6 +119,7 @@
   top: 0;
   left: 0;
   height: 46px;
+  cursor: pointer;
   border-radius: 4px;
   margin-bottom: 3px;
 

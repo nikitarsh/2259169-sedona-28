@@ -4,6 +4,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 24px 21px 7px 35px;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -45,17 +46,48 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @title-color;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
     margin: 0 0 31px 0;
     padding: 0 15px 0 0;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      right: -21px;
+      top: 53%;
+    }
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      left: -37px;
+      top: 53%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 21px;
     margin: 0 0 43px 0;
     padding: 0 15px 0 0;
+
+    &--line::before {
+      width: 280px;
+      right: -36px;
+    }
+
+    &--line::after {
+      left: -55px;
+      width: 280px;
+    }
   }
 }
 
@@ -109,6 +141,7 @@
   left: 0;
   width: 46px;
   height: 46px;
+  cursor: pointer;
 
   &::before {
     content: "";

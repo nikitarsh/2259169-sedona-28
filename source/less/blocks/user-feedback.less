@@ -24,10 +24,41 @@
 
   @media (min-width: @tablet-width) {
     margin: 0 0 28px;
+    position: relative;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      right: 0;
+      top: 53%;
+    }
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      left: 0;
+      top: 53%;
+    }
   }
 
   @media (min-width: @desktop-width) {
     font-size: 21px;
+
+    &--line::before {
+      width: 280px;
+      right: -97px;
+    }
+
+    &--line::after {
+      left: -97px;
+      width: 280px;
+    }
   }
 }
 
@@ -43,6 +74,20 @@
   padding: 16px;
   margin: 0 0 56px 0;
   color: @light-title-color;
+
+  &::placeholder {
+    color: @light-title-color;
+  }
+
+  &:hover,
+  &:focus {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid @border-bottom-color;
+  }
 
   @media (min-width: @tablet-width) {
     height: 160px;
