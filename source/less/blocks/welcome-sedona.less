@@ -1,17 +1,18 @@
 .welcome-sedona__logo {
   position: absolute;
   right: 50%;
-  top: 50%;
+  top: 51%;
   transform: translate(50%, -50%);
   display: block;
 
   @media (min-width: 768px) {
+    top: 48%;
     width: 461px;
     height: 350px;
   }
 }
 
-.welocme-sedona__wrapper {
+.welocme-sedona--wrapper {
   min-height: 389px;
   background-image: url("/img/welcome/welcome-background-mobile.jpg");
   background-color: @main-color;
@@ -41,7 +42,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .welocme-sedona__wrapper {
+  .welocme-sedona--wrapper {
     min-height: 518px;
     background-image: url("/img/welcome/welcome-background.jpg");
 
