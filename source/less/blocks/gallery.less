@@ -146,6 +146,14 @@
   cursor: pointer;
   fill-opacity: 0.3;
 
+  &:hover {
+    color: @hover-copyright-color;
+  }
+
+  &:active {
+    color: @main-nav-current-color;
+  }
+
   @media (min-width: @desktop-width) {
     background-color: transparent;
   }
@@ -155,6 +163,14 @@
   @media (min-width: @desktop-width) {
     color: #ffffff;
     fill-opacity: 1;
+
+    &:hover {
+      color: @hover-copyright-color;
+    }
+
+    &:active {
+      color: @main-nav-current-color;
+    }
   }
 }
 
