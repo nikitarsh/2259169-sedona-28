@@ -1,7 +1,6 @@
 .advantages-list__item--wrapper__town {
   @media (min-width: @tablet-width) {
     display: flex;
-    min-height: 256px;
     flex-direction: row;
   }
 
@@ -11,10 +10,10 @@
   }
 }
 
+
 .advantages-list__item--devil-brige {
   @media (min-width: @tablet-width) {
     display: flex;
-    min-height: 256px;
     flex-direction: row-reverse;
   }
 
@@ -34,7 +33,7 @@
   min-height: 189px;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 33px 50px 33px;
+    padding: 54px 11px 31px;
     min-width: 256px;
     min-height: 256px;
     margin: 0;
@@ -42,12 +41,11 @@
 
   @media (min-width: @desktop-width) {
     width: 400px;
-    min-height: 256px;
     padding: 52px 50px;
   }
 
   &:nth-child(1) {
-    @media (min-width: @mobile-width) {
+    @media (max-width: 766px) {
       padding: 56px 18px 26px;
       min-height: 211px;
     }
@@ -89,14 +87,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 400px;
+    min-width: 400px;
     min-height: 256px;
     padding: 56px 50px;
   }
 }
 
 .advantages-list__item--secondary:nth-child(2) {
-  padding: 32px 45px;
+  padding: 43px 45px 20px 43px;
 }
 
 .advantages-list__title {
@@ -148,6 +146,21 @@
 
     @media (min-width: @tablet-width) {
       text-align: center;
+      padding: 0 0 0 0;
+    }
+  }
+
+  &--food {
+    @media (min-width: @tablet-width) {
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+
+  &--house {
+    @media (min-width: @tablet-width) {
+      text-align: center;
+      padding: 0 30px;
     }
   }
 }
@@ -174,6 +187,7 @@
   padding: 0;
   margin: 0;
 
+
   &--services {
     @media (min-width: @tablet-width) {
       display: flex;
@@ -196,9 +210,9 @@
     text-align: center;
     min-width: 256px;
     min-height: 331px;
-    padding: 157px 10px 45px 10px;
-    background-position: center 60px;
-    background-size: 77px 72px;
+    padding: 160px 10px 45px 10px;
+    background-position: center 55px;
+    background-size: 85px 82px;
     margin: 0;
   }
 
@@ -223,9 +237,9 @@
     text-align: center;
     min-width: 256px;
     min-height: 331px;
-    padding: 155px 20px 45px 20px;
-    background-position: center 62px;
-    background-size: 80px 68px;
+    padding: 157px 20px 45px 20px;
+    background-position: center 57px;
+    background-size: 80px 78px;
     margin: 0;
   }
 
@@ -249,9 +263,9 @@
     text-align: center;
     min-width: 256px;
     min-height: 331px;
-    padding: 152px 21px 45px 18px;
-    background-position: center 64px;
-    background-size: 66px 75px;
+    padding: 155px 38px 31px 36px;
+    background-position: center 61px;
+    background-size: 95px 82px;
     margin: 0;
   }
 
@@ -266,6 +280,7 @@
 .advantages-image {
   @media (min-width: @tablet-width) {
     width: 100%;
+    display: flex;
     height: 100%;
   }
 }
