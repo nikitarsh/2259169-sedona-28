@@ -22,9 +22,10 @@
   }
 }
 
-.advantages-list__item--services {
+.advantages-list__wrapper {
   @media (min-width: @tablet-width) {
     display: flex;
+    height: 256px;
     flex-direction: row;
   }
 
@@ -94,9 +95,18 @@
 }
 
 .advantages-list {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  &--services {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 .advantages-list__item--house {
