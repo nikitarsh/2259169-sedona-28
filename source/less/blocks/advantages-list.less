@@ -24,17 +24,17 @@
   }
 }
 
-.advantages-list__item--services {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
-  }
+// .advantages-list__item--services {
+//   @media (min-width: @tablet-width) {
+//     display: flex;
+//     flex-direction: row;
+//   }
 
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-  }
-}
+//   @media (min-width: @desktop-width) {
+//     display: flex;
+//     flex-direction: row;
+//   }
+// }
 
 .advantages-list__item--primary {
   background-color: @main-color;
@@ -185,6 +185,13 @@
   list-style: none;
   padding: 0;
   margin: 0;
+
+  &--services {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
 }
 
 .advantages-list__item--house {
