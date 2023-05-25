@@ -41,7 +41,7 @@
 
   @media (min-width: @desktop-width) {
     width: 400px;
-    padding: 52px 50px;
+    padding: 55px 50px 53px 48px;
   }
 
   &:nth-child(1) {
@@ -89,12 +89,28 @@
   @media (min-width: @desktop-width) {
     min-width: 400px;
     min-height: 256px;
-    padding: 56px 50px;
+    padding: 53px 50px;
+  }
+}
+
+.advantages-list__item {
+  &--less {
+    @media (max-width: 766px) {
+      padding: 28px 33px 18px;
+    }
   }
 }
 
 .advantages-list__item--secondary:nth-child(2) {
-  padding: 43px 45px 20px 43px;
+  padding: 35px 45px 20px 43px;
+
+  @media (min-width: @tablet-width) {
+    padding: 43px 45px 20px 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 45px 20px 43px;
+  }
 }
 
 .advantages-list__title {
@@ -127,6 +143,12 @@
   &--road {
     @media (min-width: @tablet-width) {
       margin-bottom: 12px;
+    }
+  }
+
+  &--food {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 21px;
     }
   }
 }
@@ -230,9 +252,10 @@
 
   @media (min-width: @desktop-width) {
     text-align: center;
+    background-position: center 64px;
     min-width: 400px;
     min-height: 330px;
-    padding: 170px 50px 25px;
+    padding: 170px 20px 25px;
   }
 }
 
@@ -240,7 +263,7 @@
   padding: 0 18px 0 65px;
   background-image: url("/img/advantages/advantages-food.svg");
   background-repeat: no-repeat;
-  background-position: left 18px top -3px;
+  background-position: left 18px top -10px;
   display: flex;
   flex-direction: column;
   margin: 0 0 35px 0;
@@ -258,8 +281,10 @@
   @media (min-width: @desktop-width) {
     text-align: center;
     min-width: 400px;
+    background-position: center 67px;
+    background-size: 75px 79px;
     min-height: 330px;
-    padding: 169px 50px 54px 50px;
+    padding: 169px 28px 54px 28px;
   }
 }
 
@@ -267,7 +292,7 @@
   padding: 0 18px 42px 65px;
   background-image: url("/img/advantages/advantages-gifts.svg");
   background-repeat: no-repeat;
-  background-position: left 18px top -5px;
+  background-position: left 18px top -11px;
   display: flex;
   flex-direction: column;
 
@@ -284,6 +309,8 @@
   @media (min-width: @desktop-width) {
     text-align: center;
     min-width: 400px;
+    background-position: center 63px;
+    background-size: 83px 88px;
     min-height: 330px;
     padding: 171px 50px 25px;
   }
@@ -294,5 +321,19 @@
     width: 100%;
     display: flex;
     height: 100%;
+  }
+}
+
+.advantages-list__br {
+  &--tablet {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    @media (max-width: 1199px) {
+      display: none;
+    }
   }
 }
