@@ -19,7 +19,7 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0 0 33px 0;
+  margin: 0 0 25px 0;
   padding: 0 0 0 0;
 
   @media (min-width: @tablet-width) {
@@ -51,16 +51,24 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-  margin: 0 0 52px 0;
+  margin: 0 0 39px 0;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     margin: 0 0 86px 0;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
     margin: 0 0 84px 0;
     font-size: 14px;
     line-height: 21px;
+  }
+}
+
+.more-interesting__discription br {
+  @media (max-width: 766px) {
+    display: none;
   }
 }
 
@@ -81,8 +89,8 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
-  right: 136px;
-  bottom: 61px;
+  right: 130px;
+  bottom: 63px;
 
   @media (min-width: @tablet-width) {
     right: 353px;
