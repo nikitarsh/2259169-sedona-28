@@ -1,8 +1,16 @@
 .user-feedback {
   display: flex;
   flex-direction: column;
-  padding: 24px 20px 22px 20px;
+  padding: 24px 20px 10px 20px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 6px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 96px 6px 96px;
+  }
 }
 
 .user-feedback__title {
@@ -13,10 +21,50 @@
   font-weight: 700;
   text-transform: uppercase;
   color: @title-color;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 28px;
+    position: relative;
+    font-size: 21px;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      right: 0;
+      top: 53%;
+    }
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      left: 0;
+      top: 53%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+
+    &--line::before {
+      width: 280px;
+      right: -97px;
+    }
+
+    &--line::after {
+      left: -97px;
+      width: 280px;
+    }
+  }
 }
 
 .user-feedback__form-input {
-  font-family: "PT Sans", sans-serif;
+  font-family: @primary-fonts;
   min-width: 279px;
   height: 150px;
   background-color: @input-color;
@@ -27,10 +75,29 @@
   padding: 16px;
   margin: 0 0 56px 0;
   color: @light-title-color;
+
+  &::placeholder {
+    color: @light-title-color;
+  }
+
+  &:hover,
+  &:focus {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid @border-bottom-color;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 160px;
+    margin: 0 0 47px;
+  }
 }
 
 .user-feedback__form-button {
-  font-family: "PT Sans", sans-serif;
+  font-family: @primary-fonts;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -40,6 +107,20 @@
   padding: 16px 20px;
   border: none;
   margin: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @hover-button-color;
+  }
+
+  &:active {
+    background-color: @active-button-color;
+    color: @active-text-color;
+  }
+
+  &:disabled {
+    background-color: @disabled-button-color;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 16px 70px;
@@ -60,7 +141,12 @@
   color: @required-light-color;
 
   @media (min-width: @tablet-width) {
-    margin: 29px 0 0 0;
+    margin: 22px 0 0 0;
+    font-size: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 14px;
   }
 }
 

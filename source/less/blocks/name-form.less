@@ -17,13 +17,28 @@
 .name-form__input-text {
   width: 280px;
   height: 58px;
+  font-family: @primary-fonts;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: @title-color;
   background-color: @input-color;
   border: none;
-  padding-left: 16px;
+  padding-left: 14px;
+
+  &:hover,
+  &:focus {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 293px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 430px;

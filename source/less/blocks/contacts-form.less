@@ -4,6 +4,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,6 +18,10 @@
 
 .contacts-form__fieldset-wrapper:not(:last-child) {
   margin: 0  0 16px 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0  0 15px 0;
+  }
 }
 
 .contacts-form__label {
@@ -25,7 +30,7 @@
 }
 
 .contacts-form__input-tel {
-  font-family: "PT Sans", sans-serif;
+  font-family: @primary-fonts;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -35,8 +40,23 @@
   border: none;
   padding-left: 16px;
 
+  &:hover,
+  &:focus {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 237px;
+    padding: 4px 0 0 16px;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 344px;
+    width: 372px;
   }
 }
 
@@ -48,7 +68,7 @@
 }
 
 .contacts-form__input-email {
-  font-family: "PT Sans", sans-serif;
+  font-family: @primary-fonts;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -58,8 +78,23 @@
   border: none;
   padding-left: 16px;
 
+  &:hover,
+  &:focus {
+    background: #e5e5e5;
+  }
+
+  &:active {
+    background: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 237px;
+    padding: 4px 0 0 16px;
+  }
+
   @media (min-width: @desktop-width) {
-    width: 344px;
+    width: 372px;
   }
 }
 

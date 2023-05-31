@@ -1,13 +1,158 @@
 .impression {
   border-bottom: 1px solid @border-bottom-color;
+  padding: 24px 20px 7px 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 24px 21px 7px 35px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 21px 29px 53px;
+  }
+}
+
+.impression__fieldset {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+
+.impression__radio-input:not(:last-child) {
+  margin: 0  0 16px 0;
+}
+
+.impression__control-label {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .impression__title {
-  margin: 24px 0 0 0;
+  margin: 0 0 21px 0;
   text-align: center;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
   color: @title-color;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    margin: 0 0 31px 0;
+    padding: 0 15px 0 0;
+
+    &--line::before {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      right: -21px;
+      top: 53%;
+    }
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      width: 123px;
+      height: 1px;
+      background: #dbdbdb;
+      left: -37px;
+      top: 53%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 21px;
+    margin: 0 0 43px 0;
+    padding: 0 32px 0 0;
+
+    &--line::before {
+      width: 280px;
+      right: -36px;
+    }
+
+    &--line::after {
+      left: -55px;
+      width: 280px;
+    }
+  }
+}
+
+.impression__radio-label {
+  position: relative;
+  display: block;
+  padding: 10px 0 26px 63px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 0 26px 63px;
+    width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 16px 18px 26px 63px;
+    width: 270px;
+  }
+
+  &:hover {
+    .impression__radio-mark {
+      background-color: @disabled-button-color;
+    }
+  }
+
+  &:active {
+    .impression__radio-mark {
+      background-color: @custom-radio-color2;
+    }
+  }
+}
+
+.impression__radio-label:nth-child(3) {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.impression__radio-mark {
+  border-radius: 50%;
+  display: inline-block;
+  background: @input-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 16px;
+    height: 16px;
+    display: none;
+    background-color: @custom-radio-color;
+    border-radius: 50%;
+  }
+}
+
+.impression__radio-label input:checked + .impression__radio-mark::before {
+  display: block;
+}
+
+.impression__radio-label input[type="radio"]:focus + .impression__radio-mark {
+  outline: auto;
 }

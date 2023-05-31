@@ -6,11 +6,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link  rel="preload" href="fonts/ptsans.woff2" as="font">
-  <link  rel="preload" href="fonts/ptsansbold.woff2" as="font">
+  <link  rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+  <link  rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -18,29 +17,31 @@
 <body class="page__body">
   <div class="page-container">
     <header class="inner-header">
+      <!-- Переключение отображения меню без JS -->
       <nav class="inner-nav inner-nav--close">
-        <button class="inner-nav__toggle" type="button">
+        <!-- Переключение отображения кнопки без JS -->
+        <button class="inner-nav__toggle inner-nav__toggle--close" type="button">
           <span class="visually-hidden">Закрыть меню.</span>
         </button>
         <div class="inner-nav__wrapper">
           <ul class="inner-nav__list site-list">
             <li class="site-list__item">
-              <a class="site-list__item-link" href="/index.html">
+              <a class="site-list__link" href="/index.html">
                 Главная
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item-link" href="/catalog.html">
+              <a class="site-list__link site-list__link--current" href="/catalog.html">
                 Фото и видео
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item-link" href="/forml.html">
+              <a class="site-list__link" href="/form.html">
                 Форма отзыва
               </a>
             </li>
             <li class="site-list__item">
-              <a class="site-list__item-link" href="https://htmlacademy.ru/">
+              <a class="site-list__link" href="https://htmlacademy.ru/">
                 Html academy
               </a>
             </li>
@@ -48,10 +49,11 @@
         </div>
       </nav>
       <a class="inner-header__logo" href="/index.html">
-        <img class="logo" src="/img/header/sedona-logo.svg"  width="185" height="96" alt="Логотип городка Седона">
+        <img class="logo" src="/img/header/sedona-logo.svg" width="185" height="96" alt="Логотип городка Седона">
       </a>
       <div class="inner-header__menu">
-        <button class="inner-header__toggle" type="button">
+        <!-- Переключение отображения кнопки без JS -->
+        <button class="inner-header__toggle inner-header__toggle--close" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
       </div>
@@ -67,18 +69,21 @@
       <section class="gallery">
         <div class="gallery__intro">
           <h2 class="gallery__header">Фото и видео</h2>
-          <p class="gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о
+          <p class="gallery__description">Не можете решиться на путешествие из-за курса?<br> Фотографии помогут вам забыть о
             политике и экономике.</p>
         </div>
         <ul class="gallery__list">
           <li class="gallery__item">
-            <picture>
+            <picture class="gallery__photos">
+              <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/catalog/photo-1-desktop.webp 1x, img/catalog/photo-1-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)"
               srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x">
               <source type="image/webp" media="(min-width: 768px)"
               srcset="img/catalog/photo-1-tablet.webp 1x, img/catalog/photo-1-tablet@2x.webp 2x">
               <source media="(min-width: 768px)"
               srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/catalog/photo-1-mobile.webp 1x, img/catalog/photo-1-mobile@2x.webp 2x">
               <img class="gallery__image" src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg" alt="Пейзаж заката солнца вдоль дороги."
               width="280" height="280">
             </picture>
@@ -88,22 +93,25 @@
                 <p class="gallery__author">Автор фото: Борис</p>
               </div>
               <div class="gallery__button-wrapper">
-                <button class="gallery__button" type="button">
+                <button aria-label="Поставить 'сердечко' автору." class="gallery__button" type="button">
                   <svg width="23" height="21"><use xlink:href="/img/sprite.svg#like-icon.svg"></use></svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
-                <p class="gallery__likes">96</p>
+                <p class="gallery__likes">1350</p>
               </div>
             </div>
           </li>
           <li class="gallery__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/catalog/photo-2-desktop.webp 1x, img/catalog/photo-2-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)"
               srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
               <source type="image/webp" media="(min-width: 768px)"
               srcset="img/catalog/photo-2-tablet.webp 1x, img/catalog/photo-2-tablet@2x.webp 2x">
               <source media="(min-width: 768px)"
               srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/catalog/photo-2-mobile.webp 1x, img/catalog/photo-2-mobile@2x.webp 2x">
               <img class="gallery__image" src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg" alt="Фотография дикорастущего кактуса в горах."
               width="280" height="280">
             </picture>
@@ -113,7 +121,7 @@
                 <p class="gallery__author">Автор фото: Сергей</p>
               </div>
               <div class="gallery__button-wrapper">
-                <button class="gallery__button" type="button">
+                <button aria-label="Поставить 'сердечко' автору." class="gallery__button" type="button">
                   <svg width="23" height="21"><use xlink:href="/img/sprite.svg#like-icon.svg"></use></svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
@@ -123,12 +131,15 @@
           </li>
           <li class="gallery__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/catalog/photo-3-desktop.webp 1x, img/catalog/photo-3-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)"
               srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
               <source type="image/webp" media="(min-width: 768px)"
               srcset="img/catalog/photo-3-tablet.webp 1x, img/catalog/photo-3-tablet@2x.webp 2x">
               <source media="(min-width: 768px)"
               srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/catalog/photo-3-mobile.webp 1x, img/catalog/photo-3-mobile@2x.webp 2x">
               <img class="gallery__image" src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg" alt="Пейзах горной дороги усыпанной зелеными деревьями."
               width="280" height="280">
             </picture>
@@ -138,7 +149,7 @@
                 <p class="gallery__author">Автор фото: Петр</p>
               </div>
               <div class="gallery__button-wrapper">
-                <button class="gallery__button" type="button">
+                <button aria-label="Поставить 'сердечко' автору." class="gallery__button" type="button">
                   <svg width="23" height="21"><use xlink:href="/img/sprite.svg#like-icon.svg"></use></svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
@@ -148,12 +159,15 @@
           </li>
           <li class="gallery__item">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/catalog/photo-4-desktop.webp 1x, img/catalog/photo-4-desktop@2x.webp 2x">
               <source media="(min-width: 1200px)"
               srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
               <source type="image/webp" media="(min-width: 768px)"
               srcset="img/catalog/photo-4-tablet.webp 1x, img/catalog/photo-4-tablet@2x.webp 2x">
               <source media="(min-width: 768px)"
               srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-4-tablet@2x.jpg 2x">
+              <source type="image/webp" srcset="img/catalog/photo-4-mobile.webp 1x, img/catalog/photo-4-mobile@2x.webp 2x">
               <img class="gallery__image" src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-mobile@2x.jpg" alt="Вид на мост дьявола в каньоне."
               width="280" height="280">
             </picture>
@@ -163,7 +177,7 @@
                 <p class="gallery__author">Автор фото: Антон</p>
               </div>
               <div class="gallery__button-wrapper">
-                <button class="gallery__button" type="button">
+                <button aria-label="Поставить 'сердечко' автору." class="gallery__button" type="button">
                   <svg width="23" height="21"><use xlink:href="/img/sprite.svg#like-icon.svg"></use></svg>
                   <span class="visually-hidden">Лайк</span>
                 </button>
@@ -172,11 +186,12 @@
             </div>
           </li>
         </ul>
-      </section>
+
+  </section>
   <section class="more-interesting">
     <div class="more-interesting__wrapper">
       <h2 class="more-interesting__title">Все еще сомневаетесь?</h2>
-      <p class="more-interesting__discription">Смотрите видеопрезентацию и скорее за билетами, пока они не
+      <p class="more-interesting__discription">Смотрите видеопрезентацию и скорее за билетами, пока они<br> не
         подорожаливочередной раз!</p>
     </div>
     <div class="more-interesting__video">
@@ -188,7 +203,7 @@
         <img class="more-interesting__preview" src="/img/catalog/video-mobile.jpg" srcset="img/catalog/video-mobile@2x.jpg" width="280" height="177"
         alt="Превью видеопрезентации о Седоне.">
       </picture>
-      <button class="more-interesing__play">
+      <button class="more-interesing more-interesing--play">
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54"><path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z"/></svg>
       </button>
     </div>
@@ -197,7 +212,7 @@
   <footer class="inner-footer">
     <div class="inner-footer__wrapper">
       <div class="inner-footer__hashtag">
-        <a class="main-footer__hashtag-link" href="#">#visitSEDONA</a>
+        <a aria-label="Посетите Седону!" class="inner-footer__hashtag-link" href="#">#visitSEDONA</a>
       </div>
       <div class="social-footer">
         <ul class="social-list">
@@ -222,8 +237,7 @@
         </ul>
       </div>
       <div class="inner-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><svg width="29" height="36"><use xlink:href="/img/sprite.svg#htmlacademy.svg"></use></svg></a>
+        <a aria-label="Перейти на страницу разработчика" class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано:<svg class="copyright__icon" width="29" height="36"><use xlink:href="/img/sprite.svg#htmlacademy.svg"></use></svg></a>
       </div>
     </div>
   </footer>
