@@ -5,7 +5,7 @@
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
+    "browser-sync": "^2.29.3",
     "del": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
@@ -14,10 +14,11 @@
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "gulp-rename": "^2.0.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
     "gulp-terser": "^2.1.0",
-    "postcss": "8.3.11",
+    "postcss": "^8.4.31",
     "postcss-csso": "^6.0.1",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.11"
