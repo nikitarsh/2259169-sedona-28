@@ -17,8 +17,10 @@
 <body class="page__body">
   <div class="page-container">
     <header class="inner-header">
-      <nav class="inner-nav">
-        <button class="inner-nav__toggle" type="button">
+      <!-- Переключение отображения меню без JS -->
+      <nav class="inner-nav inner-nav--close">
+        <!-- Переключение отображения кнопки без JS -->
+        <button class="inner-nav__toggle inner-nav__toggle--close" type="button">
           <span class="visually-hidden">Закрыть меню.</span>
         </button>
         <div class="inner-nav__wrapper">
@@ -161,9 +163,10 @@
                 <span class="visited__checkbox-mark"></span>
                 <span class="visited__control-label">Слайд-парк</span>
               </label>
-              <label class="visited-form__check-label">
-                <input class="visited-form__check-input" type="checkbox" name="Red Peaks" checked>
-                <span class="visited-form__control-label">Красные скалы</span>
+              <label class="visited__check-label visited__check-label--red">
+                <input class="visually-hidden" type="checkbox" name="Red Peaks">
+                <span class="visited__checkbox-mark"></span>
+                <span class="visited__control-label">Красные скалы</span>
               </label>
             </fieldset>
         </div>

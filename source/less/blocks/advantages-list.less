@@ -23,10 +23,20 @@
   }
 }
 
-.advantages-list__item--services {
+.advantages-list__item--primary {
+  background-color: @main-color;
+  color: @white-text-color;
+  margin: 0;
+  padding: 37px 18px 37px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  min-height: 189px;
+
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: row;
+    padding: 54px 11px 31px;
+    min-width: 256px;
+    min-height: 256px;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -207,11 +217,18 @@
 }
 
 .advantages-list {
-  display: flex;
-  flex-direction: column;
   list-style: none;
   padding: 0;
   margin: 0;
+
+
+  &--services {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .advantages-list__item--house {
