@@ -143,10 +143,12 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
-);
+  gulp.series(
+    sprite
+));
+
 
 //Default
 
