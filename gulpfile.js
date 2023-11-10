@@ -74,14 +74,16 @@ const svg = () =>
     .pipe(gulp.dest('build/img'));
 
 const sprite = () => {
-  return gulp.src(['source/img/icons/*.svg', '!source/img/icons/*.svg'])
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('source/img/'));
 }
+
 // Copy
 
 const copy = (done) => {
@@ -137,13 +139,13 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  sprite,
   copyImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
-    sprite,
     createWebp
   ),
 );
@@ -154,6 +156,7 @@ export default gulp.series(
   clean,
   copy,
   optimizeImages,
+  sprite,
   copyImages,
   gulp.parallel(
     styles,
