@@ -45,7 +45,11 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "^16"
+    "node": "^14"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gulp-install": "^1.1.0",
+    "node": "^16.16.0"
+  }
 }
